@@ -1,0 +1,31 @@
+# Configuración del servidor para flight1631.com (Hostinger / Apache-LiteSpeed).
+# GitHub Pages ignora este archivo, así que no afecta a la previa.
+
+# 1) Siempre https y sin www: http://www.flight1631.com/x -> https://flight1631.com/x
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://flight1631.com%{REQUEST_URI} [L,R=301]
+
+# 2) Nunca servir archivos ocultos ni de trabajo (.git, .gitignore, README, herramientas).
+#    .well-known se deja pasar porque lo usa el certificado SSL.
+RedirectMatch 404 /\.(?!well-known/)
+RedirectMatch 404 ^/(README\.md|herramientas/.*)$
+
+# 3) Página de error propia
+ErrorDocument 404 /404.html
+
+# 4) Caché: las imágenes e íconos cambian poco; el HTML se revisa en cada visita
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# 5) Compresión de texto
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

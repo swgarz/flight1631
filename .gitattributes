@@ -1,0 +1,7 @@
+# Fin de línea LF en el repositorio (Windows convierte al sacar; el servidor Linux recibe LF)
+* text=auto eol=lf
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ico binary

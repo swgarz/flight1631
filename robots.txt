@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /fotos-originales/
+Disallow: /herramientas/
+
+Sitemap: https://flight1631.com/sitemap.xml
