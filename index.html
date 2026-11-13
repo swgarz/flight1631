@@ -374,6 +374,8 @@ section { scroll-margin-top: calc(var(--alto-cabecera) + var(--separacion-ancla)
 .relacion__grupo h3 { font-size: 1.15rem; font-weight: 500; color: var(--menta); margin-bottom: .75rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
 .chip { padding: .45rem .95rem; border: 1px solid rgb(143 208 192 / .35); border-radius: 999px; font-size: .95rem; }
+.relacion__fam + .relacion__fam { margin-top: 1.1rem; }
+.relacion__fam h4 { font-size: .78rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; color: var(--crema-suave); margin-bottom: .5rem; }
 .relacion__nota { margin-top: 1.25rem; color: var(--crema-suave); }
 @media (max-width: 800px) { .relacion { grid-template-columns: 1fr; } }
 
@@ -805,18 +807,85 @@ section { scroll-margin-top: calc(var(--alto-cabecera) + var(--separacion-ancla)
   <div class="contenedor relacion">
     <div class="seccion__cabeza reveal" style="margin-bottom:0">
       <h2>Relación</h2>
-      <p>Equipos y marcas con los que trabajamos todos los días.</p>
+      <p>Equipos DJI con los que trabajamos todos los días.</p>
       <p class="relacion__nota"><span class="pendiente">Contenido por definir con el cliente</span></p>
     </div>
 
     <div class="reveal">
       <div class="relacion__grupo">
-        <h3>Drones</h3>
-        <ul class="chips">
-          <li class="chip">DJI Mini</li><li class="chip">DJI Air</li><li class="chip">DJI Mavic</li>
-          <li class="chip">DJI Avata</li><li class="chip">DJI Phantom</li><li class="chip">Autel</li>
-          <li class="chip">Parrot</li><li class="chip">FPV a la medida</li>
-        </ul>
+        <h3>Drones DJI</h3>
+
+        <div class="relacion__fam">
+          <h4>Mini</h4>
+          <ul class="chips">
+            <li class="chip">Mavic Mini</li><li class="chip">Mini 2</li><li class="chip">Mini SE</li>
+            <li class="chip">Mini 2 SE</li><li class="chip">Mini 3</li><li class="chip">Mini 3 Pro</li>
+            <li class="chip">Mini 4K</li><li class="chip">Mini 4 Pro</li><li class="chip">Mini 5 Pro</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Neo y Flip</h4>
+          <ul class="chips">
+            <li class="chip">Neo</li><li class="chip">Neo 2</li><li class="chip">Flip</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Air</h4>
+          <ul class="chips">
+            <li class="chip">Mavic Air</li><li class="chip">Mavic Air 2</li><li class="chip">Air 2S</li>
+            <li class="chip">Air 3</li><li class="chip">Air 3S</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Mavic</h4>
+          <ul class="chips">
+            <li class="chip">Mavic Pro</li><li class="chip">Mavic 2 Pro</li><li class="chip">Mavic 2 Zoom</li>
+            <li class="chip">Mavic 3</li><li class="chip">Mavic 3 Classic</li><li class="chip">Mavic 3 Pro</li>
+            <li class="chip">Mavic 4 Pro</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>FPV</h4>
+          <ul class="chips">
+            <li class="chip">DJI FPV</li><li class="chip">Avata</li><li class="chip">Avata 2</li>
+            <li class="chip">FPV a la medida</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Spark y Phantom</h4>
+          <ul class="chips">
+            <li class="chip">Spark</li><li class="chip">Phantom 3</li><li class="chip">Phantom 4</li>
+            <li class="chip">Phantom 4 Pro V2.0</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Inspire</h4>
+          <ul class="chips">
+            <li class="chip">Inspire 1</li><li class="chip">Inspire 2</li><li class="chip">Inspire 3</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Enterprise y Matrice</h4>
+          <ul class="chips">
+            <li class="chip">Mavic 3 Enterprise</li><li class="chip">Matrice 30T</li><li class="chip">Matrice 300 RTK</li>
+            <li class="chip">Matrice 350 RTK</li><li class="chip">Matrice 4E</li><li class="chip">Matrice 4T</li>
+            <li class="chip">Matrice 5T</li>
+          </ul>
+        </div>
+
+        <div class="relacion__fam">
+          <h4>Agras</h4>
+          <ul class="chips">
+            <li class="chip">Agras T25</li><li class="chip">Agras T50</li><li class="chip">Agras T70</li>
+          </ul>
+        </div>
       </div>
       <div class="relacion__grupo">
         <h3>Componentes</h3>
